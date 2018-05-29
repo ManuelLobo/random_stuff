@@ -2,6 +2,8 @@ from prepare import prepare_data, prepare_routes
 import argparse
 
 def main():
+	"""Get shortest path for given parameters."""
+
 	parser = argparse.ArgumentParser(description='Shortest Route')
 	parser.add_argument('-g', '--graph', help='input graph file" ', type=str,
 					    dest="graph", required=True)
@@ -15,7 +17,6 @@ def main():
 	route = prepare_routes(node_dictionary)
 	route.find_shortest_route(args.start, args.finish)
 	print(route.get_route_distance(route.shortest_route))
-
 
 if __name__ == '__main__':
 	main()

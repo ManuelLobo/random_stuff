@@ -1,5 +1,6 @@
 from graph import Route, Node
 
+
 def prepare_data(graph_file):
     """Prepare data from file to data strutures.
 
@@ -32,6 +33,14 @@ def prepare_data(graph_file):
 
 
 def prepare_routes(node_dictionary):
+    """Creates a map of nodes using the processed raw graph data.
+
+    Args:
+        node_dictionary (dict): mapping of a node to its output nodes
+                                and respective distance.
+    Returns:
+        Route: a Route object containing all the Node objects.
+    """
     route = Route()
     for item in node_dictionary:
         node = Node(item)
