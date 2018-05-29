@@ -1,12 +1,12 @@
-from prepare import prepare_data, prepare_routes
 import argparse
+from prepare import prepare_data, prepare_routes
 
 def main():
 	"""Get shortest path for given parameters."""
 
 	parser = argparse.ArgumentParser(description='Shortest Route')
 	parser.add_argument('-g', '--graph', help='input graph file" ', type=str,
-					    dest="graph", required=True)
+						dest="graph", required=True)
 	parser.add_argument('-s', '--start', help='start node" ', type=str,
 						dest="start", required=True)
 	parser.add_argument('-f', '--finish', help='finish node" ', type=str,
