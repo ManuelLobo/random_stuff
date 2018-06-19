@@ -2,6 +2,12 @@ import numpy as np
 import pandas as pd
 import tensorflow as tf
 import matplotlib.pyplot as plt
+import logging
+
+
+logging.basicConfig(level=logging.DEBUG,
+  format="[%(asctime)s]"
+         "[%(levelname)s] %(message)s")
 
 
 x_data = np.linspace(0.0, 10.0, 1000000)
@@ -43,3 +49,10 @@ with tf.Session() as sess:
     model_m, model_b = sess.run([m, b])
 
     print(model_m, model_b)
+
+
+# plotting the data and result
+y_hat = x_data*model_m + model_b
+my_data.sample(250).plot(kind="scatter", x="X Data", y="Y")
+plt.plot(x_data, y_hat, "r").show()
+plt.show()
