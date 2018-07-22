@@ -1,0 +1,10 @@
+Running the code should simply be:
+  1. cd into unzipped folder
+  2. run 'run.sh':
+    e.g.  ./run.sh graph.dat 316319897 316319936
+
+
+Alternative:
+ 1. cd into unzipped folder
+ 2. run python script directly:
+  e.g.   python get_shortest_route.py -g graph.dat -s 316319897 -f 316319936
